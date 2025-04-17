@@ -7,10 +7,10 @@ RED_BUTTON_PIN = 24
 BLUE_BUTTON_PIN = 17
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setmode(RED_LED_PIN, GPIO.OUT)
-GPIO.setmode(BLUE_LED_PIN, GPIO.OUT)
-GPIO.setmode(RED_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setmode(BLUE_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(RED_LED_PIN, GPIO.OUT)
+GPIO.setup(BLUE_LED_PIN, GPIO.OUT)
+GPIO.setup(RED_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(BLUE_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 print("Blinking LED. Press Ctrl+C to quit")
 
