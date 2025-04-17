@@ -17,11 +17,11 @@ print("Blinking LED. Press Ctrl+C to quit")
 try:
     while True:
         GPIO.output(RED_LED_PIN, GPIO.HIGH)
-        if GPIO.input(BLUE_BUTTON_PIN, GPIO.LOW):
+        if GPIO.input(BLUE_BUTTON_PIN) == GPIO.LOW:
             GPIO.output(BLUE_LED_PIN, GPIO.LOW)
         time.sleep(5e-2)
         GPIO.output(BLUE_LED_PIN, GPIO.HIGH)
-        if GPIO.input(RED_BUTTON_PIN, GPIO.LOW):
+        if GPIO.input(RED_BUTTON_PIN) == GPIO.LOW:
             GPIO.output(RED_LED_PIN, GPIO.LOW)
         time.sleep(5e-2)
 except KeyboardInterrupt:
